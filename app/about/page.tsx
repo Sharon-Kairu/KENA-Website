@@ -31,17 +31,14 @@ const Page = () => {
                 <img src='/mission.png' alt='Mission' />
             </div>
             <h1 className='text-orange-500 font-bold text-2xl'> Our Mission</h1>
-            <p className='text-gray-900'>We're building a community of safe, skilled, and confident drivers and Computer proficient people. 
-                We believe in being a high value institution for learners of driving and computer, setting the standard for excellence in Thika.</p>    
+            <p className='text-gray-900'>We believe in being a high value institution for learners of driving and computer related skills, setting the standard for excellence in Thika. We're building a community of safe, skilled, confident drivers and Computer proficient people.</p>    
         </div>
         <div className='bg-blue-100 p-3 flex flex-col gap-4 items-center justify-center rounded-xl'>
             <div className='rounded-full p-2 bg-white w-16 h-16'>
                 <img src='/vision.png' alt='Vision' />
             </div>
             <h1 className='text-orange-500 font-bold text-2xl'> Our Vision</h1>
-            <p className='text-gray-900'>Our vision is to develop well rounded, confident and responsible drivers and Computer & A.I 
-                students who aspire to achieve their full potential. We will do this by providing  Quality, welcoming, happy, safe, and 
-                supportive learning environment in which everyone is equal and all achievements are celebrated.</p>    
+            <p className='text-gray-900'>Our vision is to develop well rounded, confident and responsible drivers with Road safety as our backbone. We aim to produce student with extensive knowledge of Computer packages & A.I who aspire to achieve their full potential. We will do this by providing a quality, welcoming, happy, safe, and supportive learning environment in which everyone is equal and all achievements are celebrated.</p>    
         </div>
 
       </div>
@@ -78,10 +75,7 @@ const Page = () => {
         </div>
         <h1 className='text-orange-400 font-bold text-2xl'>Google Reviews</h1>
         <p className='text-white text-center'>
-          Our students have shared their experiences on Google — and the feedback speaks for itself!  
-          With numerous 5-star reviews, we’re proud to be recognized as one of the most trusted 
-          driving schools and computer colleges in Thika.  
-          Your success stories inspire us to keep delivering quality training every day.
+          Our students have shared their experiences on Google, Facebook, Twitter (x), Tik Tok and the feedback speaks for itself! With numerous 5-star reviews, we’re proud to be recognized as one of the most trusted driving schools and computer colleges in Thika. Your success stories inspire us to keep delivering quality training every day.
         </p>
       </div>
 

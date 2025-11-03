@@ -22,12 +22,11 @@ const Homecontent = () => {
     <div className='flex flex-col justify-center items-center'>
         <div className='m-6 bg-gray-900 p-3 rounded-xl md:p-6 text-center'>
             <p className='text-white leading-relaxed'>
-              <span className='text-orange-500 font-bold text-2xl'>
-                Where your confidence behind the wheel and the computer is our top priority. 
-                We are the first to teach how Artificial intelligence incorporates in our community.
-                We're not just another driving school and computer college; we're your partners on the
-                road, road safety & in computer proficiency Skills combined with Artificial Intelligence to bring you success in your future.
-              </span>
+              <span className='text-orange-500 font-bold text-2xl'>Welcome to KENA Driving School and Computer College</span><br/>
+              Where your confidence behind the wheel and the computer is our top priority. 
+              We are the first to teach how Artificial intelligence incorporates in our community.
+              We're not just another driving school and computer college; we're your partners on the
+              road, road safety & in computer proficiency Skills combined with Artificial Intelligence to bring you success in your future.
             </p>
         </div>
 

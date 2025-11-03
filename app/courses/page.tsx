@@ -87,7 +87,9 @@ const aiPackages = [
     description: 'Explore popular AI models like ChatGPT, Gemini, Perplexity, Grok, Copilot, Meta AI, and DeepSeek — their strengths and real-world uses.',
   },
 ]
-
+const videos=[
+  "/video1.mp4", "/video2.mp4", "/video3.mp4"
+]
 const Page = () => {
   return (
     <div id="courses" className="scroll-smooth">
@@ -206,6 +208,39 @@ const Page = () => {
             ))}
           </div>
         </section>
+        {/*Sample Videos*/}
+        <div className="w-full my-10">
+          <h1 className="text-orange-500 font-bold text-xl md:text-3xl text-center mb-5">
+            Sample AI Videos
+          </h1>
+          <div className="overflow-hidden m-3 rounded-xl">
+            <div className="flex animate-marquee gap-6">
+              {videos.map((video, index) => (
+                <div key={index} className="flex-shrink-0 w-72">
+                  <video 
+                    src={video} 
+                    controls 
+                    className="rounded-lg object-cover w-full h-48"
+                  ></video>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Marquee animation */}
+          <style jsx>{`
+            @keyframes marquee {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-50%); }
+            }
+            .animate-marquee {
+              display: flex;
+              min-width: max-content;
+              animation: marquee 140s linear infinite;
+            }
+          `}</style>
+        </div>
+
       </div>
     </div>
   )
