@@ -1,6 +1,7 @@
-'use client'
+'use client';
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const data = [
   { month: 'January', img: '/glitter.png', link: '' },
@@ -24,12 +25,25 @@ const Page = () => {
         View Our Monthly Offers
       </h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {data.map((item, index) => (
-          <div
+          <motion.div
             key={index}
-            className="bg-blue-50 rounded-xl shadow-md p-5 flex flex-col sm:flex-row items-center gap-20 hover:shadow-lg transition-shadow duration-300"
+            className="bg-blue-50 rounded-xl shadow-md p-6 flex flex-col sm:flex-row items-center justify-between hover:shadow-xl transition-all duration-300"
+            initial={{ opacity: 0, scale: 0.85, y: 30 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{
+              duration: 0.5,
+              delay: index * 0.08,
+              ease: 'easeOut',
+            }}
+            whileHover={{
+              scale: 1.05,
+              boxShadow: '0px 8px 20px rgba(255, 165, 0, 0.3)',
+            }}
+            viewport={{ once: true }}
           >
+            {/* Icon Section */}
             <div className="bg-orange-100 w-24 h-24 md:w-20 md:h-20 relative mb-4 sm:mb-0 sm:mr-4 rounded-full flex items-center justify-center overflow-hidden">
               <Image
                 src={item.img}
@@ -39,6 +53,7 @@ const Page = () => {
               />
             </div>
 
+            {/* Text & Link */}
             <div className="flex flex-col items-start text-center sm:text-left">
               <h2 className="text-xl md:text-2xl font-semibold text-gray-900 mb-2">
                 {item.month}
@@ -50,7 +65,7 @@ const Page = () => {
                 View
               </a>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
