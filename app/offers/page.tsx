@@ -20,7 +20,7 @@ const data = [
 
 const Page = () => {
   return (
-    <div className="m-6 md:m-20">
+    <div className="m-8 md:m-20">
       <h1 className="text-3xl font-bold text-center text-gray-900 mb-10">
         View Our Monthly Offers
       </h1>
@@ -29,7 +29,7 @@ const Page = () => {
         {data.map((item, index) => (
           <motion.div
             key={index}
-            className="bg-blue-50 rounded-xl shadow-md p-6 flex flex-col sm:flex-row items-center justify-between hover:shadow-xl transition-all duration-300"
+            className="bg-blue-50 rounded-xl shadow-md p-6 flex flex-row items-center gap-16 hover:shadow-xl transition-all duration-300"
             initial={{ opacity: 0, scale: 0.85, y: 30 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             transition={{
@@ -55,7 +55,7 @@ const Page = () => {
 
             {/* Text & Link */}
             <div className="flex flex-col items-start text-center sm:text-left">
-              <h2 className="text-xl md:text-2xl font-semibold text-gray-900 mb-2">
+              <h2 className="text-2xl font-semibold text-gray-900 mb-2">
                 {item.month}
               </h2>
               <a

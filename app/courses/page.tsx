@@ -236,7 +236,7 @@ const Page = () => {
             .animate-marquee {
               display: flex;
               min-width: max-content;
-              animation: marquee 140s linear infinite;
+              animation: marquee 70s linear infinite;
             }
           `}</style>
         </div>
