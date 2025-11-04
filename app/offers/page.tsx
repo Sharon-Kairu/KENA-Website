@@ -13,7 +13,7 @@ const data = [
   { month: 'July', img: '/fireworks.png', link: '' },
   { month: 'August', img: '/bot.png', link: '' },
   { month: 'September', img: '/book.png', link: '' },
-  { month: 'October', img: '/partner.png', link: '' },
+  { month: 'October', img: '/partner.png', link: 'https://wa.me/p/23994366813572979/254713449911' },
   { month: 'November', img: '/roadmap.png', link: '' },
   { month: 'December', img: '/christmas-tree.png', link: '' },
 ];
