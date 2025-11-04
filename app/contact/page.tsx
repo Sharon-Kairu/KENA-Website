@@ -2,7 +2,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { FiMail, FiPhone, FiInstagram ,FiTwitter,FiFacebook} from 'react-icons/fi'
-import { FaTiktok } from "react-icons/fa";
+import { FaTiktok,FaLocationArrow,FaMapMarkedAlt } from "react-icons/fa";
 
 const Page = () => {
   return (
@@ -44,6 +44,19 @@ const Page = () => {
           >
             <FiPhone size={22} />
             <span className="text-sm md:text-base">+254 713 449 911</span>
+          </a>
+          <div className="flex items-center gap-2">
+            <FaLocationArrow size={18} />
+            <span className="text-sm md:text-base">Tabby House, 4th Floor, Room 72</span>
+          </div>
+          <a 
+            href="https://www.bing.com/maps/search?FORM=HDRSC6&q=kena+driving+school&cp=-1.036530%7E37.073940&lvl=16&style=r" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 hover:text-orange-600 transition"
+          >
+            <FaMapMarkedAlt size={18} />
+            <span className="text-sm md:text-base">Google Maps</span>
           </a>
 
           {/* Instagram */}

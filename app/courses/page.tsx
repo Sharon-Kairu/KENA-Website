@@ -1,7 +1,10 @@
 'use client'
 import React from 'react'
 import Image from 'next/image'
+import {Swiper,SwiperSlide} from 'swiper/react'
+import {Pagination,Autoplay} from 'swiper/modules'
 import { Link as ScrollLink } from 'react-scroll'
+import { DivideCircleIcon } from 'lucide-react'
 
 const drivingCategories = [
   {
@@ -90,6 +93,10 @@ const aiPackages = [
 const videos=[
   "/video1.mp4", "/video2.mp4", "/video3.mp4", "/video4.mp4", "/video5.mp4", "/video6.mp4", "/video7.mp4", "/video8.mp4", "/video9.mp4", "/video10.mp4", "/video11.mp4", "/video12.mp4", "/video13.mp4", "/video14.mp4", "/video15.mp4", "/video16.mp4"
 ]
+const images=[
+  "/Image1.jpeg", "/Image2.jpeg", "/Image3.jpeg", "/Image4.jpeg", "Image5.jpeg", "/Image6.jpeg", "/Image7.jpeg"
+]
+
 const Page = () => {
   return (
     <div id="courses" className="scroll-smooth">
@@ -208,38 +215,69 @@ const Page = () => {
             ))}
           </div>
         </section>
-        {/*Sample Videos*/}
-        <div className="w-full my-10">
+        {/* Sample Videos */}
+        <div className="w-full my-10 px-6">
           <h1 className="text-orange-500 font-bold text-xl md:text-3xl text-center mb-5">
             Sample AI Videos
           </h1>
-          <div className="overflow-hidden m-3 rounded-xl">
-            <div className="flex animate-marquee gap-6">
-              {videos.map((video, index) => (
-                <div key={index} className="flex-shrink-0 w-72">
-                  <video 
-                    src={video} 
-                    controls 
-                    className="rounded-lg object-cover w-full h-48"
-                  ></video>
+          <Swiper
+            modules={[Pagination, Autoplay]}
+            spaceBetween={25}
+            slidesPerView={1}
+            autoplay={{ delay: 1000, disableOnInteraction: false }}
+            pagination={{ clickable: true }}
+            breakpoints={{
+              640: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 5 },
+            }}
+            className="w-full max-w-7xl mx-auto"
+          >
+            {videos.map((video, index) => (
+              <SwiperSlide key={index}>
+                <div className="relative rounded-xl overflow-hidden shadow-lg bg-gray-900">
+                  <video
+                    src={video}
+                    controls
+                    className="w-full h-64 object-cover rounded-xl"
+                  />
                 </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Marquee animation */}
-          <style jsx>{`
-            @keyframes marquee {
-              0% { transform: translateX(0); }
-              100% { transform: translateX(-50%); }
-            }
-            .animate-marquee {
-              display: flex;
-              min-width: max-content;
-              animation: marquee 70s linear infinite;
-            }
-          `}</style>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
+        <div className="w-full my-10 px-6">
+          <h1 className="text-orange-500 font-bold text-xl md:text-3xl text-center mb-5">
+            Sample AI Images
+          </h1>
+          <Swiper
+            modules={[Pagination, Autoplay]}
+            dir="rtl"
+            spaceBetween={25}
+            slidesPerView={1}
+            autoplay={{ delay: 1000, disableOnInteraction: false }}
+            pagination={{ clickable: true }}
+            breakpoints={{
+              640: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 5 },
+            }}
+            className="w-full max-w-7xl mx-auto"
+          >
+            {images.map((image, index) => (
+              <SwiperSlide key={index}>
+                <div className="relative rounded-xl overflow-hidden shadow-lg bg-gray-900">
+                  <img
+                    src={image}
+                    alt="AI Image"
+                    className="w-full h-64 object-cover rounded-xl"
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
 
       </div>
     </div>
