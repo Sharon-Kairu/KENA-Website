@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 const Page = () => {
   return (
@@ -80,7 +81,39 @@ const Page = () => {
       </div>
 
       </div>
+      {/* Our Partners */}
+      <div className="bg-blue-100 w-full p-4 md:p-6">
+        <h2 className="text-2xl md:text-3xl font-semibold text-center mb-8 text-gray-900">
+          Our Valued Partners
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 ">
+          {/* Partner Card 1 */}
+          <div className="flex flex-col items-center justify-center bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 p-6 cursor-pointer">
+            <Image
+              src="/Image5.jpeg"
+              alt="Vuli Arts"
+              width={100}
+              height={100}
+              className=" mb-4 object-cover"
+            />
+            <h3 className="text-xl md:text-2xl font-medium text-orange-500">Vuli Arts</h3>
+          </div>
+
+          {/* Partner Card 2 */}
+          <div className="flex flex-col items-center justify-center bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 p-6 cursor-pointer">
+            <Image
+              src="/lightloop.jpg"
+              alt="Light Loop"
+              width={100}
+              height={100}
+              className="mb-4 object-cover"
+            />
+            <h3 className="text-xl md:text-2xl font-medium text-orange-500">Light Loop</h3>
+          </div>          
+        </div>
       </div>
+    </div>
   )
 }
 

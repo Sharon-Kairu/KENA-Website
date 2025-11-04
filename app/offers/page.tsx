@@ -4,18 +4,18 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const data = [
-  { month: 'January', img: '/glitter.png', link: '' },
-  { month: 'February', img: '/decor.png', link: '' },
-  { month: 'March', img: '/live-streaming.png', link: '' },
-  { month: 'April', img: '/education.png', link: '' },
-  { month: 'May', img: '/car.png', link: '' },
-  { month: 'June', img: '/medal.png', link: '' },
-  { month: 'July', img: '/fireworks.png', link: '' },
-  { month: 'August', img: '/bot.png', link: '' },
-  { month: 'September', img: '/book.png', link: '' },
+  { month: 'January', img: '/glitter.png', link: 'https://wa.me/p/25073444312306948/254713449911' },
+  { month: 'February', img: '/decor.png', link: 'https://wa.me/p/25053115484379522/254713449911' },
+  { month: 'March', img: '/live-streaming.png', link: 'https://wa.me/p/32113998158248548/254713449911' },
+  { month: 'April', img: '/education.png', link: 'https://wa.me/p/24778244841847884/254713449911' },
+  { month: 'May', img: '/car.png', link: 'https://wa.me/p/32157170200595462/254713449911' },
+  { month: 'June', img: '/medal.png', link: 'https://wa.me/p/25186690814284428/254713449911' },
+  { month: 'July', img: '/fireworks.png', link: 'https://wa.me/p/25111408315136799/254713449911' },
+  { month: 'August', img: '/bot.png', link: 'https://wa.me/p/24985375181120231/254713449911' },
+  { month: 'September', img: '/book.png', link: 'https://wa.me/p/32004989809144656/254713449911' },
   { month: 'October', img: '/partner.png', link: 'https://wa.me/p/23994366813572979/254713449911' },
-  { month: 'November', img: '/roadmap.png', link: '' },
-  { month: 'December', img: '/christmas-tree.png', link: '' },
+  { month: 'November', img: '/roadmap.png', link: 'https://wa.me/p/25913306444937650/254713449911' },
+  { month: 'December', img: '/christmas-tree.png', link: 'https://wa.me/p/25416445817951612/254713449911' },
 ];
 
 const Page = () => {

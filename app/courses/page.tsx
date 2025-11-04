@@ -94,7 +94,7 @@ const videos=[
   "/video1.mp4", "/video2.mp4", "/video3.mp4", "/video4.mp4", "/video5.mp4", "/video6.mp4", "/video7.mp4", "/video8.mp4", "/video9.mp4", "/video10.mp4", "/video11.mp4", "/video12.mp4", "/video13.mp4", "/video14.mp4", "/video15.mp4", "/video16.mp4"
 ]
 const images=[
-  "/Image1.jpeg", "/Image2.jpeg", "/Image3.jpeg", "/Image4.jpeg", "Image5.jpeg", "/Image6.jpeg", "/Image7.jpeg"
+  "/Image1.jpeg","/Image14.jpeg",  "/Image2.jpeg", "/Image3.jpeg", "/Image12.jpeg", "/Image4.jpeg", "/Image6.jpeg", "/Image13.jpeg", "/Image7.jpeg", "/Image8.jpeg", "/Image9.jpeg", "/Image10.jpeg","/Image11.jpeg"
 ]
 
 const Page = () => {
@@ -216,61 +216,31 @@ const Page = () => {
           </div>
         </section>
         {/* Sample Videos */}
-        <div className="w-full my-10 px-6">
-          <h1 className="text-orange-500 font-bold text-xl md:text-3xl text-center mb-5">
+        <div className="w-full my-16 px-6">
+          <h1 className="text-orange-500 font-bold text-2xl md:text-3xl text-center mb-6">
             Sample AI Videos
           </h1>
+
           <Swiper
             modules={[Pagination, Autoplay]}
-            spaceBetween={25}
+            spaceBetween={20}
             slidesPerView={1}
-            autoplay={{ delay: 1000, disableOnInteraction: false }}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
             pagination={{ clickable: true }}
             breakpoints={{
               640: { slidesPerView: 1 },
               768: { slidesPerView: 2 },
-              1024: { slidesPerView: 5 },
+              1024: { slidesPerView: 4 },
             }}
             className="w-full max-w-7xl mx-auto"
           >
             {videos.map((video, index) => (
               <SwiperSlide key={index}>
-                <div className="relative rounded-xl overflow-hidden shadow-lg bg-gray-900">
+                <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
                   <video
                     src={video}
                     controls
-                    className="w-full h-64 object-cover rounded-xl"
-                  />
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-        <div className="w-full my-10 px-6">
-          <h1 className="text-orange-500 font-bold text-xl md:text-3xl text-center mb-5">
-            Sample AI Images
-          </h1>
-          <Swiper
-            modules={[Pagination, Autoplay]}
-            dir="rtl"
-            spaceBetween={25}
-            slidesPerView={1}
-            autoplay={{ delay: 1000, disableOnInteraction: false }}
-            pagination={{ clickable: true }}
-            breakpoints={{
-              640: { slidesPerView: 1 },
-              768: { slidesPerView: 2 },
-              1024: { slidesPerView: 5 },
-            }}
-            className="w-full max-w-7xl mx-auto"
-          >
-            {images.map((image, index) => (
-              <SwiperSlide key={index}>
-                <div className="relative rounded-xl overflow-hidden shadow-lg bg-gray-900">
-                  <img
-                    src={image}
-                    alt="AI Image"
-                    className="w-full h-64 object-cover rounded-xl"
+                    className="w-full h-64 object-cover"
                   />
                 </div>
               </SwiperSlide>
@@ -278,6 +248,38 @@ const Page = () => {
           </Swiper>
         </div>
 
+        {/* Sample Images */}
+        <div className="w-full my-16 px-6">
+          <h1 className="text-orange-500 font-bold text-2xl md:text-3xl text-center mb-6">
+            Sample AI Images
+          </h1>
+
+          <Swiper
+            modules={[Pagination, Autoplay]}
+            spaceBetween={20}
+            slidesPerView={1}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            pagination={{ clickable: true }}
+            breakpoints={{
+              640: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 4 },
+            }}
+            className="w-full max-w-7xl mx-auto"
+          >
+            {images.map((image, index) => (
+              <SwiperSlide key={index}>
+                <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+                  <img
+                    src={image}
+                    alt={`AI Image ${index + 1}`}
+                    className="w-full h-64 object-cover"
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
 
       </div>
     </div>
