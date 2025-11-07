@@ -22,7 +22,7 @@ const Navbar = ({ openNav }: Props) => {
           alt="Logo"
           width={50}
           height={50}
-          className="object-contain w-[50px] h-[50px] md:w-[70px] md:h-[70px] lg:w-[100px] lg:h-[100px]"
+          className="object-contain md:w-[70px] md:h-[70px]"
         />
         <h1 className="md:text-2xl font-bold leading-tight">
           KENA DRIVING SCHOOL AND <br/>
