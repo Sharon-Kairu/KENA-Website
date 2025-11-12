@@ -20,9 +20,9 @@ const Navbar = ({ openNav }: Props) => {
         <Image
           src="/logo.png"
           alt="Logo"
-          width={70}
-          height={70}
-          className="object-contain brightness-110 contrast-125"
+          width={80}
+          height={80}
+          className="object-contain brightness-110 contrast-125 sm:w-[60px] sm:h-[60px] xs:w-[60px] xs:h-[60px]"
         />
         <h1 className="md:text-2xl font-bold leading-tight">
           KENA DRIVING SCHOOL AND <br/>
