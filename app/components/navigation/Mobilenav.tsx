@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { links } from '../../constants/Constants'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -11,8 +11,17 @@ type Props = {
 }
 
 const Mobilenav = ({ showNav, closeNav }: Props) => {
-  const pathname=usePathname()
+  const pathname = usePathname()
   const navOpen = showNav ? "translate-x-0" : "translate-x-full"
+  const prevPathRef = useRef<string | null>(null)
+
+  useEffect(() => {
+    if (prevPathRef.current !== null && prevPathRef.current !== pathname) {
+    
+      if (showNav) closeNav()
+    }
+    prevPathRef.current = pathname
+  }, [pathname, showNav])
 
   return (
     <div>
@@ -35,21 +44,22 @@ const Mobilenav = ({ showNav, closeNav }: Props) => {
         {/* Nav Links */}
         <div className="flex flex-col items-center justify-center h-full space-y-8 text-xl font-semibold tracking-wide">
           {links.map((link) => {
-          const isActive = pathname === `/${link.url}`
-          return (
-            <Link 
-              key={link.id}
-              href={`/${link.url}`}
-              className={`transition-colors duration-200 ${
-                isActive 
-                  ? "text-orange-400 font-semibold border-b-2 border-orange-400 pb-1"
-                  : "hover:text-orange-400"
-              }`}
-            >
-              {link.title}
-            </Link>
-          )
-        })}
+            const isActive = pathname === `/${link.url}`
+
+            return (
+              <Link
+                key={link.id}
+                href={`/${link.url}`}
+                className={`transition-colors duration-200 ${
+                  isActive
+                    ? "text-orange-400 font-semibold border-b-2 border-orange-400 pb-1"
+                    : "hover:text-orange-400"
+                }`}   
+              >
+                {link.title}
+              </Link>
+            )
+          })}
         </div>
       </div>
     </div>
