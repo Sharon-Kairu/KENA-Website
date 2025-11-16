@@ -31,7 +31,7 @@ export const metadata: Metadata = {
       "Where your confidence behind the wheel and behind the computer is our top priority.",
     images: [
       {
-        url: "https://www.kenadrivingschool.com/logo2.jpg",
+        url: "https://www.kenadrivingschool.com/logo2.png",
         width: 1200,
         height: 630,
         alt: "Kena Driving School Logo",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: "Kena Driving School and Computer College",
     description:
       "Where your confidence behind the wheel and behind the computer is our top priority.",
-    images: ["https://www.kenadrivingschool.com/logo2.jpg"],
+    images: ["https://www.kenadrivingschool.com/logo2.png"],
   },
 };
 
