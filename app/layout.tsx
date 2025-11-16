@@ -16,20 +16,37 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.kenadrivingschool.com'),
+  metadataBase: new URL("https://www.kenadrivingschool.com"),
   title: "Kena Driving School and Computer College",
-  description: "Where your confidence behind the wheel and behind the computer is our top priority.",
+  description:
+    "Where your confidence behind the wheel and behind the computer is our top priority.",
   icons: {
-    icon: "/favicon.ico", //
+    icon: "/favicon.ico",
   },
-  openGraph:{
-    images:'/logo.png'
+  openGraph: {
+    type: "website",
+    url: "https://www.kenadrivingschool.com",
+    title: "Kena Driving School and Computer College",
+    description:
+      "Where your confidence behind the wheel and behind the computer is our top priority.",
+    images: [
+      {
+        url: "https://www.kenadrivingschool.com/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Kena Driving School Logo",
+      },
+    ],
   },
   twitter: {
-    card: 'summary_large_image', 
-    images: '/logo.png',
-  }
+    card: "summary_large_image",
+    title: "Kena Driving School and Computer College",
+    description:
+      "Where your confidence behind the wheel and behind the computer is our top priority.",
+    images: ["https://www.kenadrivingschool.com/logo.png"],
+  },
 };
+
 
 export default function RootLayout({
   children,
