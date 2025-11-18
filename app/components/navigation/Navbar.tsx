@@ -33,11 +33,14 @@ const Navbar = ({ openNav }: Props) => {
       {/* Links - hidden on mobile */}
       <div className="hidden md:flex gap-6 lg:mr-20">
         {links.map((link) => {
-          const isActive = pathname === `/${link.url}`
+          // Map 'home' url to '/' for active check and href
+          const href = link.url === 'home' ? '/' : `/${link.url}`;
+          const isActive = pathname === href;
+
           return (
             <Link 
               key={link.id}
-              href={`/${link.url}`}
+              href={href}
               className={`transition-colors duration-200 ${
                 isActive 
                   ? "text-orange-400 font-semibold border-b-2 border-orange-400 pb-1"
@@ -46,7 +49,7 @@ const Navbar = ({ openNav }: Props) => {
             >
               {link.title}
             </Link>
-          )
+          );
         })}
       </div>
 
