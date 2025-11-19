@@ -6,10 +6,10 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { FiMenu } from 'react-icons/fi'
 
-
 type Props = {
   openNav: () => void
 }
+
 const Navbar = ({ openNav }: Props) => {
   const pathname = usePathname()
 
@@ -33,30 +33,30 @@ const Navbar = ({ openNav }: Props) => {
       {/* Links - hidden on mobile */}
       <div className="hidden md:flex gap-6 lg:mr-20">
         {links.map((link) => {
-          // Map 'home' url to '/' for active check and href
-          const href = link.url === 'home' ? '/' : `/${link.url}`;
-          const isActive = pathname === href;
+          const href = link.url === 'home' ? '/' : `/${link.url}`
+          const isActive = pathname === href
 
           return (
-            <Link 
+            <Link
               key={link.id}
               href={href}
               className={`transition-colors duration-200 ${
-                isActive 
+                isActive
                   ? "text-orange-400 font-semibold border-b-2 border-orange-400 pb-1"
                   : "hover:text-orange-400"
               }`}
             >
               {link.title}
             </Link>
-          );
+          )
         })}
       </div>
 
       {/* Hamburger Menu (mobile only) */}
-      <FiMenu 
+      <FiMenu
         onClick={openNav}
-        className="md:hidden text-3xl cursor-pointer" />
+        className="md:hidden text-3xl cursor-pointer"
+      />
     </nav>
   )
 }

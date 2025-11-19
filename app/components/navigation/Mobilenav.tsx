@@ -17,14 +17,14 @@ const Mobilenav = ({ showNav, closeNav }: Props) => {
 
   useEffect(() => {
     if (prevPathRef.current !== null && prevPathRef.current !== pathname) {
-    
       if (showNav) closeNav()
     }
     prevPathRef.current = pathname
-  }, [pathname, showNav])
+  }, [pathname, showNav, closeNav])
 
   return (
     <div>
+      {/* Overlay */}
       {showNav && (
         <div
           onClick={closeNav}
@@ -32,6 +32,7 @@ const Mobilenav = ({ showNav, closeNav }: Props) => {
         />
       )}
 
+      {/* Mobile nav panel */}
       <div
         className={`fixed top-0 right-0 h-full w-[80%] sm:w-[60%] bg-gray-900 text-white z-[10050] transform ${navOpen} transition-transform duration-500 shadow-2xl`}
       >
@@ -44,22 +45,25 @@ const Mobilenav = ({ showNav, closeNav }: Props) => {
         {/* Nav Links */}
         <div className="flex flex-col items-center justify-center h-full space-y-8 text-xl font-semibold tracking-wide">
           {links.map((link) => {
-            const isActive = pathname === `/${link.url}`
+  // Map 'home' url to '/' for active check and href
+  const href = link.url === 'home' ? '/' : `/${link.url}`;
+  const isActive = pathname === href;
 
-            return (
-              <Link
-                key={link.id}
-                href={`/${link.url}`}
-                className={`transition-colors duration-200 ${
-                  isActive
-                    ? "text-orange-400 font-semibold border-b-2 border-orange-400 pb-1"
-                    : "hover:text-orange-400"
-                }`}   
-              >
-                {link.title}
-              </Link>
-            )
-          })}
+  return (
+    <Link 
+      key={link.id}
+      href={href}
+      className={`transition-colors duration-200 ${
+        isActive 
+          ? "text-orange-400 font-semibold border-b-2 border-orange-400 pb-1"
+          : "hover:text-orange-400"
+      }`}
+    >
+      {link.title}
+    </Link>
+  );
+})}
+
         </div>
       </div>
     </div>
