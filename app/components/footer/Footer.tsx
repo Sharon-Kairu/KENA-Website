@@ -45,7 +45,7 @@ const Footer = () => {
             <span className="text-sm md:text-base">Tabby House, 4th Floor, Room 72</span>
           </div>
           <a 
-            href="https://www.bing.com/maps/search?FORM=HDRSC6&q=kena+driving+school&cp=-1.036530%7E37.073940&lvl=16&style=r" 
+            href="https://www.google.com/maps/dir//TABBY+HOUSE,+4TH+FLOOR.+ROOM+72,+Thika/@-1.0420122,37.0934533,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x182f4e8ed9fed8bd:0xdf8d9f6cc4482f75!2m2!1d37.0739404!2d-1.0365298?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center gap-2 hover:text-orange-600 transition"
