@@ -1,26 +1,25 @@
 'use client'
-import React, { useEffect, useRef } from 'react'
+
+import React, { useEffect, useState } from 'react'
 import { links } from '../../constants/Constants'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { CgClose } from "react-icons/cg"
+import { CgClose } from 'react-icons/cg'
 
 type Props = {
   showNav: boolean
   closeNav: () => void
 }
 
-const Mobilenav = ({ showNav, closeNav }: Props) => {
+const MobileNav = ({ showNav, closeNav }: Props) => {
   const pathname = usePathname()
-  const navOpen = showNav ? "translate-x-0" : "translate-x-full"
-  const prevPathRef = useRef<string | null>(null)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    if (prevPathRef.current !== null && prevPathRef.current !== pathname) {
-      if (showNav) closeNav()
-    }
-    prevPathRef.current = pathname
-  }, [pathname, showNav, closeNav])
+    setMounted(true)
+  }, [])
+
+  const navOpen = showNav ? 'translate-x-0' : 'translate-x-full'
 
   return (
     <div>
@@ -44,30 +43,33 @@ const Mobilenav = ({ showNav, closeNav }: Props) => {
 
         {/* Nav Links */}
         <div className="flex flex-col items-center justify-center h-full space-y-8 text-xl font-semibold tracking-wide">
-          {links.map((link) => {
-  // Map 'home' url to '/' for active check and href
-  const href = link.url === 'home' ? '/' : `/${link.url}`;
-  const isActive = pathname === href;
+          {links.map(link => {
+            const href = link.url === 'home' ? '/' : `/${link.url}`
 
-  return (
-    <Link 
-      key={link.id}
-      href={href}
-      className={`transition-colors duration-200 ${
-        isActive 
-          ? "text-orange-400 font-semibold border-b-2 border-orange-400 pb-1"
-          : "hover:text-orange-400"
-      }`}
-    >
-      {link.title}
-    </Link>
-  );
-})}
+            // Only apply active styling on client-side
+            const isActive = mounted
+              ? (href === '/' && (pathname === '/' || pathname === '/home')) || pathname === href
+              : false
 
+            return (
+              <Link
+                key={link.id}
+                href={href}
+                onClick={closeNav} // close menu on link click
+                className={`transition-colors duration-200 ${
+                  isActive
+                    ? 'text-orange-400 font-semibold border-b-2 border-orange-400 pb-1'
+                    : 'hover:text-orange-400'
+                }`}
+              >
+                {link.title}
+              </Link>
+            )
+          })}
         </div>
       </div>
     </div>
   )
 }
 
-export default Mobilenav
+export default MobileNav

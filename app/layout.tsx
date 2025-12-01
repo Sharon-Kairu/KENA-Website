@@ -4,6 +4,7 @@ import "./globals.css";
 import Responsivenav from "./components/navigation/Responsivenav";
 import Footer from "./components/footer/Footer";
 import WhatsappButton from "./components/WhatsappButton";
+import ClientOnly from "./components/ClientOnly"; // <-- import the wrapper
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -47,7 +48,6 @@ export const metadata: Metadata = {
   },
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -55,15 +55,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      ><Responsivenav/>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        {/* Wrap Responsivenav in ClientOnly to avoid SSR hydration errors */}
+        <ClientOnly>
+          <Responsivenav />
+        </ClientOnly>
+
         <main className="pt-18 lg:pt-24">
           {children}
-          <WhatsappButton/>
+          <WhatsappButton />
         </main>
-        
-        <Footer/>
+
+        <Footer />
       </body>
     </html>
   );
