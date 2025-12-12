@@ -86,7 +86,7 @@ export default function RootLayout({
           <Responsivenav />
         </ClientOnly>
 
-        <main className="pt-18 lg:pt-24">
+        <main className="">
           {children}
           <WhatsappButton />
         </main>

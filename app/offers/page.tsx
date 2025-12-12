@@ -20,7 +20,7 @@ const data = [
 
 const Page = () => {
   return (
-    <div className="m-8 md:m-20">
+    <div className="m-8 md:m-20 pt-18">
       <h1 className="text-3xl font-bold text-center text-gray-900 mb-10">
         View Our Monthly Offers
       </h1>

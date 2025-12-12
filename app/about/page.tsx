@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const Page = () => {
   return (
-    <div id="about" className="flex flex-col items-center justify-center">
+    <div id="about" className="flex flex-col items-center justify-center pt-18">
       <div
         className="relative w-full bg-cover bg-center flex items-center justify-center px-6 py-16 md:py-24"
         style={{ backgroundImage: "url('/about_bg.jpg')" }}

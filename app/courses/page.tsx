@@ -99,7 +99,7 @@ const images=[
 
 const Page = () => {
   return (
-    <div id="courses" className="scroll-smooth">
+    <div id="courses" className="scroll-smooth pt-18">
       <div className="mt-20">
         <h1 className="flex items-center justify-center mt-5 text-gray-900 font-bold text-3xl">
           COURSES WE OFFER

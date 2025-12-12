@@ -4,7 +4,7 @@ import Reviews from "../components/reviews/Reviews";
 
 export default function RootPage() {
   return (
-    <div id='home'>
+    <div id='home className="pt-18'>
         <Hero/>
         <Homecontent/>
         <Reviews/> 
