@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.kenadrivingschool.com"),
-  title: "Kena Driving School | Computer College & AI Training in Kenya",
+  title: "Kena Driving School and Computer College",
   description:
     "Kena Driving School offers NTSA-approved driving lessons, computer college courses, and modern AI classes for video and image generation. Enroll today at Kena Driving School & Computer College in Kenya.",
   icons: {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://www.kenadrivingschool.com",
-    title: "Kena Driving School | Computer College & AI Training in Kenya",
+    title: "Kena Driving School and Computer College",
     description:
       "Learn to drive with NTSA-certified instructors at Kena Driving School and advance your digital skills with AI classes for video generation, image generation, and computer training.",
     images: [
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kena Driving School | Driving Lessons, Computer Courses & AI Training",
+    title: "Kena Driving School and Computer College",
     description:
       "Kena Driving School offers driving lessons, computer college programs, and AI courses for image and video generation. Advance your skills today.",
     images: ["https://www.kenadrivingschool.com/logo2.png"],
