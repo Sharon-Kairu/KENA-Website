@@ -19,6 +19,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.kenadrivingschool.com"),
+  other: {
+    "site_name": "Kena Driving School and Computer College"
+  },
   title: "Kena Driving School and Computer College",
   description:
     "Kena Driving School offers NTSA-approved driving lessons, computer college courses, and modern AI classes for video and image generation. Enroll today at Kena Driving School & Computer College in Kenya.",
@@ -27,6 +30,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
+    siteName: "Kena Driving School and Computer College",
     url: "https://www.kenadrivingschool.com",
     title: "Kena Driving School and Computer College",
     description:
