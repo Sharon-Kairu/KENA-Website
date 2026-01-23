@@ -102,9 +102,25 @@ const Footer = () => {
       </div>
 
       {/* Bottom Text */}
-      <div className="text-center font-bold text-gray-400 text-xs md:text-sm mt-8 border-t border-gray-700 pt-3">
+      <div className="text-center font-bold text-gray-400 text-xs md:text-sm mt-8 border-t border-gray-700 pt-3 gap-3">
         © {new Date().getFullYear()} KENA DRIVING SCHOOL. All rights reserved.
+
+        <div className="mt-4 text-sm text-gray-600">
+          <p>
+            Website developed by
+            <a
+              href="https://my-portfolio-one-mu-33.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-1 font-semibold text-pink-500 underline underline-offset-4 transition-colors duration-200 hover:text-pink-700"
+            >
+              Sharon Kairu
+            </a>
+          </p>
+        </div>
+
       </div>
+      
     </footer>
   )
 }
