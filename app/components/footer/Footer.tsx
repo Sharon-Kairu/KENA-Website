@@ -102,20 +102,41 @@ const Footer = () => {
       </div>
 
       {/* Bottom Text */}
-      <div className="text-center font-bold text-gray-400 text-xs md:text-sm mt-8 border-t border-gray-700 pt-3 gap-3">
+      <div className="text-center font-bold text-gray-400 text-xs md:text-sm mt-8 border-t border-gray-700 pt-3 gap-3 items-center justify-center">
         © {new Date().getFullYear()} KENA DRIVING SCHOOL. All rights reserved.
 
-        <div className="mt-4 text-sm text-gray-600">
+        <div className="mt-4 text-sm text-gray-600 ">
           <p>
             Website developed by
-            <a
-              href="https://my-portfolio-one-mu-33.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-1 font-semibold text-pink-500 underline underline-offset-4 transition-colors duration-200 hover:text-pink-700"
-            >
-              Sharon Kairu
-            </a>
+            <div className='flex flex-row items-center justify-center'>
+              <Image src="/anga.png" alt='Anga Tech' width={40} height={40}/>
+              <a
+                href="https://www.angatech.it.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  relative
+                  ml-1
+                  text-lg
+                  font-semibold
+                  bg-gradient-to-r
+                  from-blue-400
+                  to-purple-300
+                  bg-clip-text
+                  text-transparent
+                  after:absolute
+                  after:left-0
+                  after:bottom-[-4px]
+                  after:h-[2px]
+                  after:w-full
+                  after:bg-purple-300
+                  hover:text-purple-600
+                "
+              >
+                Anga 
+              </a>
+            </div>
+            
           </p>
         </div>
 
